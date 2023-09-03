@@ -25,7 +25,6 @@ export function HomeScreen() {
   const utils = trpc.useContext()
   const supabase = useSupabase()
   const { user } = useUser()
-  const toast = useToastController()
 
   const signInLink = useLink({
     href: '/sign-in',
@@ -35,72 +34,18 @@ export function HomeScreen() {
     href: '/sign-up',
   })
 
-  const dataFetchingLink = useLink({
-    href: '/data-fetching',
-  })
-
-  const virtualizedListLink = useLink({
-    href: '/virtualized-list',
-  })
-
-  const paramsLink = useLink({
-    href: '/params/tim',
-  })
-
   return (
     <ScrollView>
       <YStack flex={1} justifyContent="center" alignItems="center" padding="$4" space="$4">
         <SolitoImage src="/t4-logo.png" width={128} height={128} alt="T4 Logo" />
-        <H1 textAlign="center">👋 Hello, T4 App</H1>
+        <H1 textAlign="center">👋 Hello, this is Sterling Saver</H1>
         <Separator />
         <Paragraph textAlign="center" size={'$2'}>
-          Unifying React Native + Web.
-        </Paragraph>
-        <Paragraph textAlign="center" size={'$2'}>
-          The T4 Stack is made by{' '}
-          <Anchor href="https://twitter.com/ogtimothymiller" target="_blank">
-            Tim Miller
-          </Anchor>
-          , give it a star{' '}
-          <Anchor href="https://github.com/timothymiller/t4-app" target="_blank" rel="noreferrer">
-            on Github.
-          </Anchor>
-        </Paragraph>
-        <Paragraph textAlign="center" size={'$2'}>
-          Tamagui is made by{' '}
-          <Anchor href="https://twitter.com/natebirdman" target="_blank">
-            Nate Weinert
-          </Anchor>
-          , give it a star{' '}
-          <Anchor href="https://github.com/tamagui/tamagui" target="_blank" rel="noreferrer">
-            on Github.
-          </Anchor>
+          Sterling Saver is your ultimate companion on the path to financial success. Tailored
+          specifically for users in the UK, this powerful personal finance app empowers you to take
+          charge of your money effortlessly.
         </Paragraph>
 
-        <Button onPress={() => Linking.openURL('https://t4stack.com/')}>Learn More...</Button>
-
-        <H3>🦮🐴 App Demos</H3>
-        <YStack space="$2">
-          <Button {...virtualizedListLink} space="$2">
-            Virtualized List
-          </Button>
-          <Button {...dataFetchingLink} space="$2">
-            Fetching Data
-          </Button>
-          <Button {...paramsLink} space="$2">
-            Params
-          </Button>
-          <Button
-            onPress={() => {
-              toast.show('Hello world!', {
-                message: 'Description here',
-              })
-            }}
-          >
-            Show Toast
-          </Button>
-          <SheetDemo />
-        </YStack>
         {user ? (
           <Button
             onPress={async () => {
@@ -124,40 +69,5 @@ export function HomeScreen() {
         )}
       </YStack>
     </ScrollView>
-  )
-}
-
-const SheetDemo = (): React.ReactNode => {
-  const [open, setOpen] = useSheetOpen()
-  const [position, setPosition] = useState(0)
-
-  return (
-    <>
-      <Button onPress={() => setOpen((x) => !x)} space="$2">
-        Bottom Sheet
-      </Button>
-      <Sheet
-        modal
-        open={open}
-        onOpenChange={setOpen}
-        snapPoints={[80]}
-        position={position}
-        onPositionChange={setPosition}
-        dismissOnSnapToBottom
-      >
-        <Sheet.Overlay />
-        <Sheet.Frame alignItems="center" justifyContent="center">
-          <Sheet.Handle />
-          <Button
-            size="$6"
-            circular
-            icon={ChevronDown}
-            onPress={() => {
-              setOpen(false)
-            }}
-          />
-        </Sheet.Frame>
-      </Sheet>
-    </>
   )
 }

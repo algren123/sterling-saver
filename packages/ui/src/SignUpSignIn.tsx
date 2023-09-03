@@ -14,7 +14,7 @@ export const SignUpSignInComponent = ({
   type,
   handleOAuthWithPress,
   handleEmailWithPress,
-}: Props): React.ReactNode => {
+}: Props) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
