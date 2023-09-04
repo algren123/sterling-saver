@@ -1,71 +1,36 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "b4ee64d5-7b72-4828-8645-33c41f0af619",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "65a5a66a-0df8-4759-97ec-aa440391010a",
+  "prevId": "b4ee64d5-7b72-4828-8645-33c41f0af619",
   "tables": {
-    "Car": {
-      "name": "Car",
+    "Essentials": {
+      "name": "Essentials",
       "columns": {
-        "id": {
-          "name": "id",
+        "email": {
+          "name": "email",
           "type": "text",
           "primaryKey": true,
           "notNull": true,
           "autoincrement": false
         },
-        "make": {
-          "name": "make",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "model": {
-          "name": "model",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "year": {
-          "name": "year",
+        "entertainment": {
+          "name": "entertainment",
           "type": "integer",
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false
         },
-        "color": {
-          "name": "color",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "price": {
-          "name": "price",
-          "type": "real",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "mileage": {
-          "name": "mileage",
+        "food": {
+          "name": "food",
           "type": "integer",
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false
         },
-        "fuelType": {
-          "name": "fuelType",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "transmission": {
-          "name": "transmission",
-          "type": "text",
+        "health": {
+          "name": "health",
+          "type": "integer",
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false
@@ -103,7 +68,9 @@
   "enums": {},
   "_meta": {
     "schemas": {},
-    "tables": {},
+    "tables": {
+      "\"Car\"": "\"Essentials\""
+    },
     "columns": {}
   }
 }

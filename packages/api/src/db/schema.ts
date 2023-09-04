@@ -12,19 +12,16 @@ export type User = InferSelectModel<typeof UserTable>
 export type InsertUser = InferInsertModel<typeof UserTable>
 export const UserSchema = createInsertSchema(UserTable)
 
-// Car
-export const CarTable = sqliteTable('Car', {
-  id: text('id').primaryKey(),
-  make: text('make').notNull(),
-  model: text('model').notNull(),
-  year: integer('year').notNull(),
-  color: text('color').notNull(),
-  price: real('price').notNull(),
-  mileage: integer('mileage').notNull(),
-  fuelType: text('fuelType').notNull(),
-  transmission: text('transmission').notNull(),
+// Essentials
+export const EssentialsTable = sqliteTable('Essentials', {
+  email: text('email').primaryKey(),
+  entertainment: integer('entertainment').notNull(),
+  food: integer('food').notNull(),
+  health: integer('health').notNull(),
 })
 
-export type Car = InferSelectModel<typeof CarTable>
-export type InsertCar = InferInsertModel<typeof CarTable>
-export const CarSchema = createInsertSchema(CarTable)
+export type Essentials = InferSelectModel<typeof EssentialsTable>
+export type InsertEssentials = InferInsertModel<typeof EssentialsTable>
+export const EssentialsSchema = createInsertSchema(EssentialsTable)
+
+// Bills

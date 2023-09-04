@@ -7,7 +7,7 @@ import { capitalizeWord } from 'app/utils/string'
 import { isExpoGo } from 'app/utils/flags'
 import { useSupabase } from 'app/utils/supabase/hooks/useSupabase'
 
-export const SignInScreen = (): React.ReactNode => {
+export const SignInScreen = () => {
   const { replace } = useRouter()
   const supabase = useSupabase()
   const toast = useToastController()
@@ -15,7 +15,6 @@ export const SignInScreen = (): React.ReactNode => {
   const handleOAuthSignInWithPress = async (provider: Provider) => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: provider,
-      options: { scopes: 'read:user user:email' },
     })
 
     if (error) {

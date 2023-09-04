@@ -54,22 +54,6 @@ export const SignUpSignInComponent = ({
         </Button>
         <Button
           size="$5"
-          onPress={() => handleOAuthWithPress('apple')}
-          hoverStyle={{ opacity: 0.8 }}
-          focusStyle={{ scale: 0.95 }}
-          borderColor="$gray8Light"
-        >
-          <SolitoImage
-            style={{ width: 22, height: 22 }}
-            src={'/auth/apple-logo.png'}
-            width={22}
-            height={22}
-            resizeMode="contain"
-            alt="Apple Logo"
-          />
-        </Button>
-        <Button
-          size="$5"
           onPress={() => handleOAuthWithPress('discord')}
           hoverStyle={{ opacity: 0.8 }}
           focusStyle={{ scale: 0.95 }}

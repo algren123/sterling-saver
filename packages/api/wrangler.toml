@@ -1,13 +1,18 @@
-name = "t4-api"
+name = "sterling-saver"
 compatibility_date = "2023-08-07"
 send_metrics = false
-account_id = "719e3374c9fabba87860b809acb3c939"
+account_id = "6761eb6560391f445f3d3e3d3e1948c9"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "production"
-database_id = "aa5e3923-0f1b-469a-8bb8-d10fb866efe0"
+database_name = "sterling-db"
+database_id = "bb5fa70d-68fa-4ba6-91e7-b6223ff133cb"
 migrations_dir = "migrations"
+
+[[d1_databases]]
+binding = "preview"
+database_name = "preview-sterling-db"
+database_id = "fc30607e-15b8-4db7-bca5-c64c6dc9dda5"
 
 # The necessary secrets are:
 # - APP_URL - for preventing CORS errors
