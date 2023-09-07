@@ -32,6 +32,8 @@ export const TRPCProvider: React.FC<{
             const { data } = await supabase.auth.getSession()
             const token = data?.session?.access_token
 
+            console.log()
+
             return {
               Authorization: token ? `Bearer ${token}` : undefined,
             }

@@ -11,7 +11,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     },
   },
   owner: process.env.EAS_OWNER || 'algren123',
-  plugins: ['expo-router'],
+  plugins: ['expo-router', '@react-native-google-signin/google-signin'],
   experiments: {
     tsconfigPaths: true,
     typedRoutes: true,

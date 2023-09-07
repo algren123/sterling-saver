@@ -11,6 +11,8 @@ import Head from 'next/head'
 import type { SolitoAppProps } from 'solito'
 import type { Session } from '@supabase/supabase-js'
 
+import { NavigationContainer } from '@react-navigation/native'
+
 if (process.env.NODE_ENV === 'production') {
   require('../public/tamagui.css')
 }
@@ -23,9 +25,11 @@ const T4App = ({ Component, pageProps }: SolitoAppProps<{ initialSession: Sessio
   return (
     <>
       <Metadata />
-      <Provider initialSession={pageProps.initialSession}>
-        <Component {...pageProps} />
-      </Provider>
+      <NavigationContainer>
+        <Provider initialSession={pageProps.initialSession}>
+          <Component {...pageProps} />
+        </Provider>
+      </NavigationContainer>
     </>
   )
 }

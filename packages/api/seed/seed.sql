@@ -1,32 +1,19 @@
 INSERT INTO Essentials (email, entertainment, food, health)
 VALUES
-  ('user1@example.com', 100, 200, 80),
-  ('user2@example.com', 90, 180, 70),
-  ('user3@example.com', 80, 220, 90),
-  ('user4@example.com', 110, 210, 75),
-  ('user5@example.com', 120, 190, 85),
-  ('user6@example.com', 95, 205, 100),
-  ('user7@example.com', 105, 195, 110),
-  ('user8@example.com', 115, 185, 95),
-  ('user9@example.com', 85, 215, 70),
-  ('user10@example.com', 125, 175, 105),
-  ('user11@example.com', 105, 205, 85),
-  ('user12@example.com', 95, 195, 75),
-  ('user13@example.com', 115, 185, 90),
-  ('user14@example.com', 110, 210, 80),
-  ('user15@example.com', 90, 190, 70),
-  ('user16@example.com', 100, 200, 100),
-  ('user17@example.com', 120, 180, 95),
-  ('user18@example.com', 85, 220, 75),
-  ('user19@example.com', 105, 190, 85),
-  ('user20@example.com', 110, 210, 90),
-  ('user21@example.com', 95, 205, 70),
-  ('user22@example.com', 125, 175, 105),
-  ('user23@example.com', 105, 205, 90),
-  ('user24@example.com', 95, 195, 75),
-  ('user25@example.com', 115, 185, 85),
-  ('user26@example.com', 90, 190, 70),
-  ('user27@example.com', 100, 200, 95),
-  ('user28@example.com', 120, 180, 100),
-  ('user29@example.com', 85, 220, 80),
-  ('user30@example.com', 105, 190, 90);
+  ('mikygamingchannel@gmail.com', 100, 200, 80);
+
+INSERT INTO Bills (email, councilTax, electricity, gas, internet, phone, water)
+VALUES
+  ('mikygamingchannel@gmail.com', 200, 100, 50, 40, 30, 60);
+
+INSERT INTO Subscriptions (email, amazon, apple, disneyPlus, netflix, gym, spotify)
+VALUES
+  ('mikygamingchannel@gmail.com', 10, 15, 12, 8, 20, 9);
+
+INSERT INTO Income (email, salary, other)
+VALUES
+  ('mikygamingchannel@gmail.com', 50000, 1000);
+
+INSERT INTO Savings (email, amount)
+VALUES
+  ('mikygamingchannel@gmail.com', 10000);

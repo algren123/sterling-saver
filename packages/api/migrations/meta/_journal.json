@@ -15,6 +15,13 @@
       "when": 1693840826358,
       "tag": "0001_legal_may_parker",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1693941694120,
+      "tag": "0002_wide_scarlet_spider",
+      "breakpoints": true
     }
   ]
 }

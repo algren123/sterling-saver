@@ -2,7 +2,6 @@ import { H1, H2, Paragraph, YStack } from '@t4/ui'
 import React from 'react'
 import { trpc } from 'app/utils/trpc'
 import type { Essentials } from '@t4/api/src/db/schema'
-import { useUser } from 'app/utils/supabase/hooks/useUser'
 
 export function DataFetchingScreen() {
   const helloWorld = trpc.hello.world.useQuery<string>('world')
@@ -11,7 +10,7 @@ export function DataFetchingScreen() {
     protectedRoute?.failureReason?.data?.httpStatus !== 200 &&
     protectedRoute?.failureReason?.data?.httpStatus !== undefined
 
-  const allEssentials = trpc.essentials.all.useQuery<Essentials[]>()
+  const allEssentials = trpc.savings.getByEmail.useQuery()
 
   return (
     <YStack f={1} jc="center" ai="center" p="$4" space="$4">

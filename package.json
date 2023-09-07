@@ -38,13 +38,22 @@
     "@babel/runtime": "^7.22.11",
     "@manypkg/cli": "^0.21.0",
     "@nderscore/tamagui-typescript-plugin": "^0.5.4",
+    "@react-native-google-signin/google-signin": "^10.0.1",
     "@supabase/supabase-js": "^2.33.1",
     "check-dependency-version-consistency": "^4.1.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.48.0",
+    "expo": "~49.0.8",
+    "expo-auth-session": "^5.0.2",
+    "expo-crypto": "^12.4.1",
+    "expo-splash-screen": "~0.20.5",
+    "expo-status-bar": "~1.6.0",
+    "expo-web-browser": "^12.3.2",
     "miniflare": "3.20230821.0",
     "node-gyp": "^9.4.0",
     "prettier": "^3.0.3",
+    "react": "18.2.0",
+    "react-native": "0.72.4",
     "react-native-url-polyfill": "^2.0.0",
     "turbo": "^1.10.13",
     "typescript": "^5.2.2",
@@ -56,6 +65,7 @@
   },
   "packageManager": "pnpm@8.7.1",
   "devDependencies": {
+    "@babel/core": "^7.20.0",
     "wrangler": "^3.6.0"
   }
 }

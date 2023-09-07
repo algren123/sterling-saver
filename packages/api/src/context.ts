@@ -6,6 +6,7 @@ import jwt from '@tsndr/cloudflare-worker-jwt'
 
 interface User {
   id: string
+  email: string
 }
 
 interface ApiContextProps {
@@ -47,10 +48,12 @@ export const createContext = async (
         }
 
         const userId = decodedToken?.payload?.sub
+        const userEmail = decodedToken?.payload?.email
 
         if (userId) {
           return {
             id: userId,
+            email: userEmail,
           }
         }
       } catch (e) {

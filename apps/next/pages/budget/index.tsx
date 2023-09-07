@@ -1,4 +1,4 @@
-import { BudgetScreen } from 'app/features/budget/screen'
+import { UpdateBudgetScreen } from 'app/features/updateBudget/screen'
 import Head from 'next/head'
 
 export default function Page() {
@@ -7,7 +7,7 @@ export default function Page() {
       <Head>
         <title>Budget Tracker</title>
       </Head>
-      <BudgetScreen />
+      <UpdateBudgetScreen />
     </>
   )
 }

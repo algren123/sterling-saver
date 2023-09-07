@@ -4,6 +4,9 @@
       "eas": {
         "projectId": "f15cda53-fbc4-4f22-8cba-b00cb672a6aa"
       }
+    },
+    "ios": {
+      "bundleIdentifier": "com.algren123.sterling-saver"
     }
   }
 }

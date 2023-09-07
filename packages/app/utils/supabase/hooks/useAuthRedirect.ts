@@ -9,6 +9,7 @@ export const useAuthRedirect = () => {
   const [, setLoading] = useIsLoadingSession()
   const supabase = useSupabase()
   const router = useRouter()
+
   useEffect(() => {
     const signOutListener = supabase.auth.onAuthStateChange(async (event: AuthChangeEvent) => {
       if (event === 'SIGNED_OUT') {
@@ -24,6 +25,7 @@ export const useAuthRedirect = () => {
         setLoading(false)
       }
     })
+
     return () => {
       signOutListener.data.subscription.unsubscribe()
     }
